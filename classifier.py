@@ -23,7 +23,7 @@ def classify_item(desc):
     desc = str(desc).lower()
     stop_level = 3
 
-    for keywords, level in rules:
+    for keywords, level in RULES:
         if any(k in desc for k in keywords):
             stop_level = max(stop_level, level)
 
